@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-image: url('images/crashinmountains.jpg');
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto)repeat(5, 80px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 2.5px solid rgba(255, 255, 255, .60);
+    outline: none;
+    background-color: rgba(255, 255, 255, .60);
+    border-radius: 40px;
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .79);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: #232323;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 30px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.2rem;
+}
+.output .current-operand {
+    color: rgba(255, 255, 255);
+    font-size: 2rem;
+}
